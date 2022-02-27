@@ -21,7 +21,7 @@ const About = () => {
 			</h2>
 
 			<div className="app__profiles">
-				{abouts.map((about) => {
+				{abouts.map((about) => { 
 					return (
 						<motion.div
 							whileInView={{ opacity: 1 }}
