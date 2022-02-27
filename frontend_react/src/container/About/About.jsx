@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./About.scss";
 import { motion } from "framer-motion";
 
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 const About = () => {
@@ -21,7 +21,7 @@ const About = () => {
 			</h2>
 
 			<div className="app__profiles">
-				{abouts.map((about) => { 
+				{abouts.map((about) => {
 					return (
 						<motion.div
 							whileInView={{ opacity: 1 }}
@@ -43,4 +43,8 @@ const About = () => {
 	);
 };
 
-export default AppWrap(About, "about");
+export default AppWrap(
+	MotionWrap(About, "app__about"),
+	"about",
+	"app__whitebg"
+);
