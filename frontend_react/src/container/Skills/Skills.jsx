@@ -54,13 +54,14 @@ const Skills = () => {
 							<motion.div className="app__skills-exp-works">
 								{experience.works.map((work) => (
 									<>
+										{console.log(work)}
 										<motion.div
 											whileInView={{ opacity: [0, 1] }}
 											transition={{ duration: 0.5 }}
 											className="app__skills-exp-work"
 											data-tip
 											data-for={work.name}
-											key={work.name}>
+											key={work._key}>
 											<h4 className="bold-text">{work.name}</h4>
 											<p className="p-text">{work.company}</p>
 										</motion.div>
