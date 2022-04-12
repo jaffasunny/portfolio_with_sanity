@@ -26,9 +26,9 @@ const Testimonial = () => {
 
 		client.fetch(brandsQuery).then((data) => {
 			setBrands(data);
-			brands.map((brand) => {
-				console.log("assets: ", brand.imgUrl);
-			});
+			// brands.map((brand) => {
+			// 	console.log("assets: ", brand.imgUrl);
+			// });
 		});
 	}, []);
 
@@ -81,17 +81,16 @@ const Testimonial = () => {
 			)}
 
 			<div className="app__testimonial-brands app__flex">
-				{brands.map((brand) =>
-					brand.imgUrl.asset ? (
-						<motion.div
-							whileInView={{ opacity: [0, 1] }}
-							transition={{ duration: 0.5, type: "tween" }}
-							key={brand._id}>
-							<img src={urlFor(brand.imgUrl.asset._ref)} alt={brand.name} />
-						</motion.div>
-					) : (
-						""
-					)
+				{brands.map(
+					(brand) =>
+						brand.imgUrl.asset && (
+							<motion.div
+								whileInView={{ opacity: [0, 1] }}
+								transition={{ duration: 0.5, type: "tween" }}
+								key={brand._id}>
+								<img src={urlFor(brand.imgUrl.asset._ref)} alt={brand.name} />
+							</motion.div>
+						)
 				)}
 			</div>
 		</>
