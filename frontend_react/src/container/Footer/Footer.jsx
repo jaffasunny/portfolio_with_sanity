@@ -41,60 +41,61 @@ const Footer = () => {
 
 	return (
 		<>
-			<h2 className="head-text">Take a coffee & chat with me</h2>
-			<div className="app__footer-cards">
-				<div className="app__footer-card">
-					<img src={images.email} alt="email" />
-					<a href="mailto:jaffer.sunny125@gmail.com" className="p-text">
+			<h2 className='head-text'>Take a coffee & chat with me</h2>
+			<div className='app__footer-cards'>
+				<div className='app__footer-card'>
+					<img src={images.email} alt='email' />
+					<a href='mailto:jaffer.sunny125@gmail.com' className='p-text'>
 						jaffer.sunny125@gmail.com
 					</a>
 				</div>
-				<div className="app__footer-card">
-					<img src={images.mobile} alt="mobile" />
-					<a href="tell:+92 3062542314" className="p-text">
-						+92 3062542314
+				<div className='app__footer-card'>
+					<img src={images.mobile} alt='mobile' />
+
+					<a href='tell:+971544839963' className='p-text'>
+						+971544839963
 					</a>
 				</div>
 			</div>
 
 			{!isFormSubmitted ? (
-				<div className="app__footer-form app__flex">
-					<div className="app__flex">
+				<div className='app__footer-form app__flex'>
+					<div className='app__flex'>
 						<input
-							type="text"
-							className="p-text"
-							placeholder="Your Name"
-							name="name"
+							type='text'
+							className='p-text'
+							placeholder='Your Name'
+							name='name'
 							value={name}
 							onChange={handleChangeInput}
 						/>
 					</div>
-					<div className="app__flex">
+					<div className='app__flex'>
 						<input
-							type="email"
-							className="p-text"
-							placeholder="Your Email"
-							name="email"
+							type='email'
+							className='p-text'
+							placeholder='Your Email'
+							name='email'
 							value={email}
 							onChange={handleChangeInput}
 						/>
 					</div>
 					<div>
 						<textarea
-							className="p-text"
-							placeholder="Your Message"
-							name="message"
+							className='p-text'
+							placeholder='Your Message'
+							name='message'
 							value={message}
 							onChange={handleChangeInput}></textarea>
 					</div>
 
-					<button type="button" className="p-text" onClick={handleSubmit}>
+					<button type='button' className='p-text' onClick={handleSubmit}>
 						{loading ? "Sending" : "Send Message"}
 					</button>
 				</div>
 			) : (
 				<div>
-					<h3 className="head-text">Thank you for getting in touch!</h3>
+					<h3 className='head-text'>Thank you for getting in touch!</h3>
 				</div>
 			)}
 		</>

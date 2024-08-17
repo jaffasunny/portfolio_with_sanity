@@ -3,8 +3,13 @@
 :root {
 	--font-base: "DM Sans", sans-serif;
 
-	--primary-color: #edf2f8;
+	/* --primary-color: #edf2f8;
 	--secondary-color: #313bac;
+	--black-color: #030303;
+	--lightGray-color: #e4e4e4; */
+	--primary-color: #f7efe5;
+	--secondary-color: #674188;
+	--light-purple: #e2bfd92a;
 	--black-color: #030303;
 	--lightGray-color: #e4e4e4;
 	--gray-color: #6b7688;
@@ -17,4 +22,31 @@
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+	background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--lightGray-color);
+	border-radius: 10px;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+	width: 5px;
+	background-color: transparent;
+}
+
+.truncate {
+	width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

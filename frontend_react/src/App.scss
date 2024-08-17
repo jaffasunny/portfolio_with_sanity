@@ -4,7 +4,8 @@
 }
 
 .app__whitebg {
-	background-color: var(--white-color);
+	// background-color: var(--white-color);
+	background-color: var(--light-purple);
 }
 
 .app__primarybg {
@@ -55,7 +56,7 @@
 	font-size: 2.75rem;
 	font-weight: 800;
 	text-align: center;
-	color: var(--black-color);
+	color: var(--gray-color);
 	text-transform: capitalize;
 
 	span {

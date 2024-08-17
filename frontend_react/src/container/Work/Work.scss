@@ -145,6 +145,20 @@
 		}
 	}
 
+	.bold-text {
+		width: 200px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.p-desc {
+		height: 140px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
 	.app__work-tag {
 		position: absolute;
 
