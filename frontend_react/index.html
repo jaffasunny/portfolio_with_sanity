@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/jaffalogo-nobg.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="description" content="Jaffer Sunny's portfolio" />
+		<link rel="apple-touch-icon" href="/logo192.png" />
+		<link rel="manifest" href="/manifest.json" />
+
+		<!--
+			Archivo used to load via @import inside index.css, which is the
+			slowest way to bring in a font: the browser has to fetch the main
+			stylesheet, parse it, discover the @import, then fetch that before
+			it can even start fetching the font files. Combined with
+			`display=swap`, the fallback font would render first and then
+			visibly "pop" into Archivo once it arrived — that's the glitch.
+			Loading it here instead lets the browser's preload scanner start
+			fetching it immediately, in parallel with everything else, and
+			`display=optional` means: if it's not ready almost instantly, just
+			keep the fallback for this page view instead of swapping later.
+		-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=optional"
+			rel="stylesheet" />
+
+		<title>Jaffer's Portfolio</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
+</html>

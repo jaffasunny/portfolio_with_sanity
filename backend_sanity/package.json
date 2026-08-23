@@ -1,30 +1,32 @@
 {
-  "name": "portfoliowithsanity",
+  "name": "portfolio-with-sanity-studio",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.1.0",
+  "description": "Sanity Studio v3 (TypeScript) for the portfolio_with_sanity project",
   "main": "package.json",
   "author": "Syed Jaffer Sunny <jaffer.sunny125@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "dev": "sanity dev",
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity deploy-graphql",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.27.1",
-    "@sanity/core": "^2.27.0",
-    "@sanity/default-layout": "^2.27.1",
-    "@sanity/default-login": "^2.27.0",
-    "@sanity/desk-tool": "^2.27.1",
-    "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^2.27.1",
-    "eslint": "^8.6.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "styled-components": "^5.2.0"
+    "@sanity/vision": "^6.9.2",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.9.2",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "typescript": "^7.0.2"
   }
 }
